@@ -60,52 +60,6 @@
           </tr>
         </tbody>
       </table>
-      <div id="paypal-button"></div>
-
-      <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-
-      <script>
-      paypal.Button.render(
-  {
-    env: "sandbox", // Or 'sandbox'
-
-    client: {
-      sandbox:
-        "AXKH-5DKtbK7bP27JT4HvjKOQixoSAd833Y_aNqWom4trYfIrtMAQ1QzbrXqG0I5HebbggBP3CMncQVp"
-    },
-
-    commit: true, // Show a 'Pay Now' button
-
-    payment: function(data, actions) {
-      return actions.payment.create({
-        payment: {
-          transactions: [
-            {
-              amount: { total: "6800", currency: "MXN" }
-              //amount: { total: calculateTotal(), currency: "MXN" }
-            }
-          ]
-        }
-      });
-    },
-
-    onAuthorize: function(data, actions) {
-      return actions.payment.execute().then(function(payment) {
-        // The payment is complete!
-        // You can now show a confirmation message to the customer
-        document.getElementById("good-payment").style.display = "block";
-      });
-    }
-  },
-  "#paypal-button"
-);
-
-function calculateTotal() {}
-</script>
-
-<div style="display:none" class="alert alert-success" id="good-payment" role="alert">
-<strong>Well done!</strong> You successfully read this important alert message.
-</div>
-
+      <script src="js/checkout.js"></script>
   </body>
 </html>
