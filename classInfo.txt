@@ -1,0 +1,16 @@
+Features:
+
+1) Draw products
+2) Add to shopping cart
+3) Toggle but button
+4) How to save new items? Local storage
+  how to keep items from one html to another
+  ps local storage can save array only strings,
+  work around?
+  ps2 how to add multiple items to string of array?
+5) Checkout (Review shopping cart)
+6) Payment Paypal
+  como calcular el pago total?
+  como agregar ese total y enviarlo a paypal?
+
+Crear historias de usuario
